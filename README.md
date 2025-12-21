@@ -136,19 +136,6 @@ Show how using more training data (20% → 50% → 80%) affects accuracy.
 
 ---
 
-# ⭐ Bonus (Optional)
-
-Add a “Bonus Points” section for:
-
-* Novel ideas
-* Custom datasets
-* New algorithms
-* ≥ 5 classifiers
-* ≥ 4 datasets
-* Very strong empirical analysis
-
----
-
 # 🎓 Grading (Summary)
 
 * **10 pts** — Dataset size/challenge
@@ -159,23 +146,40 @@ Add a “Bonus Points” section for:
 
 ---
 
-# 📝 TL;DR — What to Submit
+# What to Submit
 
 1. **Report** (1000+ words, all required sections)
 2. **Code**
 3. **Results tables/plots**
 4. **Hyperparameters chosen via CV**
 5. **Train/val/test accuracies for all runs (81 total)**
-6. *(Optional)* Bonus section
 
 ---
 
-# ✔ Project Checklist (Short)
+# ✔ Project Checklist 
 
-### **Before You Start**
+### **Before We Start**
 
 * [ ] Pick 3 UCI datasets
-* [ ] Pick 3 classifiers
+  - Must come from the UCI Machine Learning Repository.
+  - Must be usable for binary classification
+  - If originally multi-class → merge into two classes.
+  - Must be large/complex enough to produce meaningful results.
+
+(3) http://archive.ics.uci.edu/dataset/572/taiwanese+bankruptcy+prediction Taiwanese bankrupcy prediction 
+(1) http://archive.ics.uci.edu/dataset/73/mushroom Predict if mushroom is poisonous or not 
+(2) http://archive.ics.uci.edu/dataset/591/gender+by+name Gender by name 
+
+
+* [ ] Pick 3 classifiers:
+**Logistic Regression + RandomForest + KNN**
+
+  - Choose 3 classifiers from those evaluated in the Caruana & Niculescu-Mizil study.
+   - Different kernels of the same model (e.g., linear SVM vs RBF SVM) do NOT count as different classifiers.
+   - Implementations must be reliable (e.g., scikit-learn, XGBoost, libsvm).
+  - Each classifier must support hyperparameter tuning (via cross-validation).
+  - For each classifier, you must produce results on all 3 datasets under all 3 partitions.
+
 * [ ] Convert multi-class datasets → binary (if needed)
 
 ### **Data Prep**
